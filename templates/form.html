@@ -100,23 +100,23 @@
     <div id="mathForm" class="form-container active">
         <form id="myForm" method="post" action="/predict" onsubmit="handleSubmit(event)">
             <label for="mathSex">Sex:</label>
-            <input type="radio" id="mathSexFemale" name="mathSex" value="0"> <label for="mathSexFemale">Female</label>
-            <input type="radio" id="mathSexMale" name="mathSex" value="1"> <label for="mathSexMale">Male</label> <br>
+            <input type="radio" id="mathSex" name="mathSex" value="0"> <label for="mathSex">Female</label>
+            <input type="radio" id="mathSex" name="mathSex" value="1"> <label for="mathSex">Male</label> <br>
             
             <label for="mathAge">Age:</label>
             <input type="text" id="mathAge" name="mathAge"><br>
             
             <label for="mathAddress">Address:</label>
-            <input type="radio" id="mathAddressUrban" name="mathAddress" value="0"> <label for="mathAddressUrban">Urban area</label>
-            <input type="radio" id="mathAddressRural" name="mathAddress" value="1"> <label for="mathAddressRural">Rural area</label> <br>
+            <input type="radio" id="mathAddress" name="mathAddress" value="0"> <label for="mathAddress">Urban area</label>
+            <input type="radio" id="mathAddress" name="mathAddress" value="1"> <label for="mathAddress">Rural area</label> <br>
             
             <label for="mathFamSize">Family Size:</label>
-            <input type="radio" id="mathFamSizeLess" name="mathFamSize" value="0"> <label for="mathFamSizeLess">Less or equal to 3</label>
-            <input type="radio" id="mathFamSizeMore" name="mathFamSize" value="1"> <label for="mathFamSizeMore">Greater than 3</label> <br>
+            <input type="radio" id="mathFamSize" name="mathFamSize" value="0"> <label for="mathFamSize">Less or equal to 3</label>
+            <input type="radio" id="mathFamSize" name="mathFamSize" value="1"> <label for="mathFamSize">Greater than 3</label> <br>
             
             <label for="mathPStatus">Parental Status:</label>
-            <input type="radio" id="mathPStatusLiving" name="mathPStatus" value="0"> <label for="mathPStatusLiving">Living Together</label>
-            <input type="radio" id="mathPStatusApart" name="mathPStatus" value="1"> <label for="mathPStatusApart">Apart</label> <br>
+            <input type="radio" id="mathPStatus" name="mathPStatus" value="0"> <label for="mathPStatus">Living Together</label>
+            <input type="radio" id="mathPStatus" name="mathPStatus" value="1"> <label for="mathPStatus">Apart</label> <br>
             
             <label for="mathMedu">Mother Education:</label>
             <select id="mathMedu" name="mathMedu">
@@ -127,8 +127,8 @@
                 <option value="4">Higher Education</option>
             </select><br>
 
-            <label for="mathMedu">Father Education:</label>
-            <select id="mathMedu" name="mathMedu">
+            <label for="mathFedu">Father Education:</label>
+            <select id="mathFedu" name="mathFedu">
                 <option value="0">None</option>
                 <option value="1">Primary Education (4th Grade)</option>
                 <option value="2">5th to 9th Class</option>
@@ -136,8 +136,8 @@
                 <option value="4">Higher Education</option>
             </select><br>
 
-            <label for="motherJob">Mother Job:</label>
-<select id="mathmotherJob" name="motherJob">
+            <label for="mathmotherJob">Mother Job:</label>
+<select id="mathmotherJob" name="mathmotherJob">
     <option value="0">At Home</option>
     <option value="1">Health</option>
     <option value="2">Other</option>
@@ -146,7 +146,7 @@
 </select><br>
 
 <label for="mathfatherJob">Father Job:</label>
-<select id="fatherJob" name="fatherJob">
+<select id="mathfatherJob" name="mathfatherJob">
     <option value="0">At Home</option>
     <option value="1">Health</option>
     <option value="2">Other</option>
@@ -154,153 +154,153 @@
     <option value="4">Teacher</option>
 </select><br>
 
-<label for="reasonMap">Reason for Choosing School:</label>
-<select id="mathreasonMap" name="reasonMap">
+<label for="mathreasonMap">Reason for Choosing School:</label>
+<select id="mathreasonMap" name="mathreasonMap">
     <option value="0">Course</option>
     <option value="1">Others</option>
     <option value="2">Close to Home</option>
     <option value="3">Reputation</option>
 </select><br>
 
-<label for="guardianMap">Guardian:</label>
-<select id="mathguardianMap" name="guardianMap">
+<label for="mathguardianMap">Guardian:</label>
+<select id="mathguardianMap" name="mathguardianMap">
     <option value="0">Mother</option>
     <option value="1">Father</option>
     <option value="2">Other</option>
 </select><br>
 
-<label for="travelTime">Home to School Travel Time:</label>
-<select id="mathtravelTime" name="travelTime">
+<label for="mathtravelTime">Home to School Travel Time:</label>
+<select id="mathtravelTime" name="mathtravelTime">
     <option value="1">Less than 15 min</option>
     <option value="2">15 to 30 min</option>
     <option value="3">30 min to 1 hour</option>
     <option value="4">More than 1 hour</option>
 </select><br>
 
-<label for="studyTime">Weekly Study Time:</label>
-<select id="mathstudyTime" name="studyTime">
+<label for="mathstudyTime">Weekly Study Time:</label>
+<select id="mathstudyTime" name="mathstudyTime">
     <option value="1">Less than 2 hours</option>
     <option value="2">2 to 5 hours</option>
     <option value="3">5 to 10 hours</option>
     <option value="4">More than 10 hours</option>
 </select><br>
 
-<label for="pastFailures">Number of Past Class Failures:</label>
-<input type="number" id="mathpastFailures" name="pastFailures" min="1" max="4" step="1"><br>
+<label for="mathpastFailures">Number of Past Class Failures:</label>
+<input type="number" id="mathpastFailures" name="mathpastFailures" min="1" max="4" step="1"><br>
 
-<label for="eduSupport">Extra Educational Support:</label>
-<input type="radio" id="matheduSupportYes" name="eduSupport" value="1"> <label for="eduSupportYes">Yes</label>
-<input type="radio" id="matheduSupportNo" name="eduSupport" value="0"> <label for="eduSupportNo">No</label><br>
+<label for="matheduSupport">Extra Educational Support:</label>
+<input type="radio" id="matheduSupport" name="matheduSupport" value="1"> <label for="matheduSupport">Yes</label>
+<input type="radio" id="matheduSupport" name="matheduSupport" value="0"> <label for="matheduSupport">No</label><br>
 
-<label for="famSupport">Family Educational Support:</label>
-<input type="radio" id="mathfamSupportYes" name="famSupport" value="1"> <label for="famSupportYes">Yes</label>
-<input type="radio" id="mathfamSupportNo" name="famSupport" value="0"> <label for="famSupportNo">No</label><br>
+<label for="mathfamSupport">Family Educational Support:</label>
+<input type="radio" id="mathfamSupport" name="mathfamSupport" value="1"> <label for="mathfamSupport">Yes</label>
+<input type="radio" id="mathfamSupport" name="mathfamSupport" value="0"> <label for="mathfamSupport">No</label><br>
 
-<label for="paidClasses">Extra Paid Classes:</label>
-<input type="radio" id="mathpaidClassesYes" name="paidClasses" value="1"> <label for="paidClassesYes">Yes</label>
-<input type="radio" id="mathpaidClassesNo" name="paidClasses" value="0"> <label for="paidClassesNo">No</label><br>
+<label for="mathpaidClasses">Extra Paid Classes:</label>
+<input type="radio" id="mathpaidClasses" name="mathpaidClasses" value="1"> <label for="mathpaidClasses">Yes</label>
+<input type="radio" id="mathpaidClasses" name="mathpaidClasses" value="0"> <label for="mathpaidClasses">No</label><br>
 
-<label for="extraCurricular">Extra-curricular Activities:</label>
-<input type="radio" id="mathextraCurricularYes" name="extraCurricular" value="1"> <label for="extraCurricularYes">Yes</label>
-<input type="radio" id="mathextraCurricularNo" name="extraCurricular" value="0"> <label for="extraCurricularNo">No</label><br>
+<label for="mathextraCurricular">Extra-curricular Activities:</label>
+<input type="radio" id="mathextraCurricular" name="mathextraCurricular" value="1"> <label for="mathextraCurricular">Yes</label>
+<input type="radio" id="mathextraCurricular" name="mathextraCurricular" value="0"> <label for="mathextraCurricular">No</label><br>
 
-<label for="nurserySchool">Attended Nursery School:</label>
-<input type="radio" id="mathnurserySchoolYes" name="nurserySchool" value="1"> <label for="nurserySchoolYes">Yes</label>
-<input type="radio" id="mathnurserySchoolNo" name="nurserySchool" value="0"> <label for="nurserySchoolNo">No</label><br>
+<label for="mathnurserySchool">Attended Nursery School:</label>
+<input type="radio" id="mathnurserySchool" name="mathnurserySchool" value="1"> <label for="mathnurserySchool">Yes</label>
+<input type="radio" id="mathnurserySchool" name="mathnurserySchool" value="0"> <label for="mathnurserySchoolmath">No</label><br>
 
-<label for="higherEdu">Wants to Take Higher Education:</label>
-<input type="radio" id="mathhigherEduYes" name="higherEdu" value="1"> <label for="higherEduYes">Yes</label>
-<input type="radio" id="mathhigherEduNo" name="higherEdu" value="0"> <label for="higherEduNo">No</label><br>
+<label for="mathhigherEdu">Wants to Take Higher Education:</label>
+<input type="radio" id="mathhigherEdu" name="mathhigherEdu" value="1"> <label for="mathhigherEdu">Yes</label>
+<input type="radio" id="mathhigherEdu" name="mathhigherEdu" value="0"> <label for="mathhigherEdu">No</label><br>
 
-<label for="internetAccess">Internet Access at Home:</label>
-<input type="radio" id="mathinternetAccessYes" name="internetAccess" value="1"> <label for="internetAccessYes">Yes</label>
-<input type="radio" id="mathinternetAccessNo" name="internetAccess" value="0"> <label for="internetAccessNo">No</label><br>
+<label for="mathinternetAccess">Internet Access at Home:</label>
+<input type="radio" id="mathinternetAccess" name="mathinternetAccess" value="1"> <label for="mathinternetAccess">Yes</label>
+<input type="radio" id="mathinternetAccess" name="mathinternetAccess" value="0"> <label for="mathinternetAccess">No</label><br>
 
-<label for="romanticRelationship">With a Romantic Relationship:</label>
-<input type="radio" id="mathromanticRelationshipYes" name="romanticRelationship" value="1"> <label for="romanticRelationshipYes">Yes</label>
-<input type="radio" id="mathromanticRelationshipNo" name="romanticRelationship" value="0"> <label for="romanticRelationshipNo">No</label><br>
+<label for="mathromanticRelationship">With a Romantic Relationship:</label>
+<input type="radio" id="mathromanticRelationship" name="mathromanticRelationship" value="1"> <label for="mathromanticRelationship">Yes</label>
+<input type="radio" id="mathromanticRelationship" name="mathromanticRelationship" value="0"> <label for="mathromanticRelationship">No</label><br>
 
-<label for="familyRelationship">Quality of Family Relationships:</label>
-<input type="radio" id="fmathamilyRelationship1" name="familyRelationship" value="1">
-<label for="mathfamilyRelationship1">Very Bad</label>
-<input type="radio" id="fmathamilyRelationship2" name="familyRelationship" value="2">
-<label for="familyRelationship2">Bad</label>
-<input type="radio" id="mathfamilyRelationship3" name="familyRelationship" value="3">
-<label for="familyRelationship3">Average</label>
-<input type="radio" id="mathfamilyRelationship4" name="familyRelationship" value="4">
-<label for="familyRelationship4">Good</label>
-<input type="radio" id="mathfamilyRelationship5" name="familyRelationship" value="5">
-<label for="familyRelationship5">Excellent</label><br>
+<label for="mathfamilyRelationship">Quality of Family Relationships:</label>
+<input type="radio" id="mathfamilyRelationship" name="mathfamilyRelationship" value="1">
+<label for="mathfamilyRelationship">Very Bad</label>
+<input type="radio" id="mathfamilyRelationship" name="mathfamilyRelationship" value="2">
+<label for="mathfamilyRelationship">Bad</label>
+<input type="radio" id="mathfamilyRelationship" name="mathfamilyRelationship" value="3">
+<label for="mathfamilyRelationship">Average</label>
+<input type="radio" id="mathfamilyRelationship" name="mathfamilyRelationship" value="4">
+<label for="mathfamilyRelationship">Good</label>
+<input type="radio" id="mathfamilyRelationship" name="mathfamilyRelationship" value="5">
+<label for="mathfamilyRelationship">Excellent</label><br>
 
-<label for="freeTime">Free Time After School:</label>
-<input type="radio" id="mathfreeTime1" name="freeTime" value="1">
-<label for="freeTime1">Very Low</label>
-<input type="radio" id="mathfreeTime2" name="freeTime" value="2">
-<label for="freeTime2">Low</label>
-<input type="radio" id="mathfreeTime3" name="freeTime" value="3">
-<label for="freeTime3">Average</label>
-<input type="radio" id="mathfreeTime4" name="freeTime" value="4">
-<label for="freeTime4">High</label>
-<input type="radio" id="mathfreeTime5" name="freeTime" value="5">
-<label for="freeTime5">Very High</label><br>
+<label for="mathfreeTime">Free Time After School:</label>
+<input type="radio" id="mathfreeTime" name="mathfreeTime" value="1">
+<label for="mathfreeTime">Very Low</label>
+<input type="radio" id="mathfreeTime" name="mathfreeTime" value="2">
+<label for="mathfreeTime">Low</label>
+<input type="radio" id="mathfreeTime" name="mathfreeTime" value="3">
+<label for="mathfreeTime">Average</label>
+<input type="radio" id="mathfreeTime" name="mathfreeTime" value="4">
+<label for="mathfreeTime">High</label>
+<input type="radio" id="mathfreeTime" name="mathfreeTime" value="5">
+<label for="mathfreeTime">Very High</label><br>
 
-<label for="goingOut">Going Out with Friends:</label>
-<input type="radio" id="mathgoingOut1" name="goingOut" value="1">
-<label for="goingOut1">Very Low</label>
-<input type="radio" id="mathgoingOut2" name="goingOut" value="2">
-<label for="goingOut2">Low</label>
-<input type="radio" id="mathgoingOut3" name="goingOut" value="3">
-<label for="goingOut3">Average</label>
-<input type="radio" id="mathgoingOut4" name="goingOut" value="4">
-<label for="goingOut4">High</label>
-<input type="radio" id="mathgoingOut5" name="goingOut" value="5">
-<label for="goingOut5">Very High</label><br>
+<label for="mathgoingOut">Going Out with Friends:</label>
+<input type="radio" id="mathgoingOut" name="mathgoingOut" value="1">
+<label for="mathgoingOut">Very Low</label>
+<input type="radio" id="mathgoingOut" name="mathgoingOut" value="2">
+<label for="mathgoingOut">Low</label>
+<input type="radio" id="mathgoingOut" name="mathgoingOut" value="3">
+<label for="mathgoingOut">Average</label>
+<input type="radio" id="mathgoingOut" name="mathgoingOut" value="4">
+<label for="mathgoingOut">High</label>
+<input type="radio" id="mathgoingOut" name="mathgoingOut" value="5">
+<label for="mathgoingOut">Very High</label><br>
 
-<label for="workdayAlcohol">Workday Alcohol Consumption:</label>
-<input type="radio" id="mathworkdayAlcohol1" name="workdayAlcohol" value="1">
-<label for="workdayAlcohol1">Very Low</label>
-<input type="radio" id="mathworkdayAlcohol2" name="workdayAlcohol" value="2">
-<label for="workdayAlcohol2">Low</label>
-<input type="radio" id="mathworkdayAlcohol3" name="workdayAlcohol" value="3">
-<label for="workdayAlcohol3">Average</label>
-<input type="radio" id="mathworkdayAlcohol4" name="workdayAlcohol" value="4">
-<label for="workdayAlcohol4">High</label>
-<input type="radio" id="mathworkdayAlcohol5" name="workdayAlcohol" value="5">
-<label for="workdayAlcohol5">Very High</label><br>
+<label for="mathworkdayAlcohol">Workday Alcohol Consumption:</label>
+<input type="radio" id="mathworkdayAlcohol" name="mathworkdayAlcohol" value="1">
+<label for="mathworkdayAlcohol">Very Low</label>
+<input type="radio" id="mathworkdayAlcohol" name="mathworkdayAlcohol" value="2">
+<label for="mathworkdayAlcohol">Low</label>math
+<input type="radio" id="mathworkdayAlcohol" name="mathworkdayAlcohol" value="3">
+<label for="mathworkdayAlcohol">Average</label>
+<input type="radio" id="mathworkdayAlcohol" name="mathworkdayAlcohol" value="4">
+<label for="mathworkdayAlcohol">High</label>
+<input type="radio" id="mathworkdayAlcohol" name="mathworkdayAlcohol" value="5">
+<label for="mathworkdayAlcohol">Very High</label><br>
 
-<label for="weekendAlcohol">Weekend Alcohol Consumption:</label>
-<input type="radio" id="weekendAlcohol1" name="weekendAlcohol" value="1">
-<label for="weekendAlcohol1">Very Low</label>
-<input type="radio" id="weekendAlcohol2" name="weekendAlcohol" value="2">
-<label for="weekendAlcohol2">Low</label>
-<input type="radio" id="weekendAlcohol3" name="weekendAlcohol" value="3">
-<label for="weekendAlcohol3">Average</label>
-<input type="radio" id="weekendAlcohol4" name="weekendAlcohol" value="4">
-<label for="weekendAlcohol4">High</label>
-<input type="radio" id="weekendAlcohol5" name="weekendAlcohol" value="5">
-<label for="weekendAlcohol5">Very High</label><br>
+<label for="mathweekendAlcohol">Weekend Alcohol Consumption:</label>
+<input type="radio" id="mathweekendAlcohol" name="mathweekendAlcohol" value="1">
+<label for="mathweekendAlcohol">Very Low</label>
+<input type="radio" id="mathweekendAlcohol" name="mathweekendAlcohol" value="2">
+<label for="mathweekendAlcohol">Low</label>
+<input type="radio" id="mathweekendAlcohol" name="mathweekendAlcohol" value="3">
+<label for="mathweekendAlcohol">Average</label>
+<input type="radio" id="mathweekendAlcohol" name="mathweekendAlcohol" value="4">
+<label for="mathweekendAlcohol">High</label>
+<input type="radio" id="mathweekendAlcohol" name="mathweekendAlcohol" value="5">
+<label for="mathweekendAlcohol">Very High</label><br>
 
 
-<label for="healthStatus">Current Health Status:</label>
-<input type="radio" id="healthStatus1" name="healthStatus" value="1">
-<label for="healthStatus1">Very Bad</label>
-<input type="radio" id="healthStatus2" name="healthStatus" value="2">
-<label for="healthStatus2">Bad</label>
-<input type="radio" id="healthStatus3" name="healthStatus" value="3">
-<label for="healthStatus3">Average</label>
-<input type="radio" id="healthStatus4" name="healthStatus" value="4">
-<label for="healthStatus4">Good</label>
-<input type="radio" id="healthStatus5" name="healthStatus" value="5">
-<label for="healthStatus5">Very Good</label><br>
+<label for="mathhealthStatus">Current Health Status:</label>
+<input type="radio" id="mathhealthStatus" name="mathhealthStatus" value="1">
+<label for="mathhealthStatus">Very Bad</label>
+<input type="radio" id="mathhealthStatus" name="mathhealthStatus" value="2">
+<label for="mathhealthStatus">Bad</label>
+<input type="radio" id="mathhealthStatus" name="mathhealthStatus" value="3">
+<label for="mathhealthStatus">Average</label>
+<input type="radio" id="mathhealthStatus" name="mathhealthStatus" value="4">
+<label for="mathhealthStatus">Good</label>
+<input type="radio" id="mathhealthStatus" name="mathhealthStatus" value="5">
+<label for="mathhealthStatus">Very Good</label><br>
 
-<label for="schoolAbsences">Number of School Absences (0 to 93):</label>
-<input type="number" id="schoolAbsences" name="schoolAbsences" min="0" max="93" step="1"><br>
+<label for="mathschoolAbsences">Number of School Absences (0 to 93):</label>
+<input type="number" id="mathschoolAbsences" name="mathschoolAbsences" min="0" max="93" step="1"><br>
 
-<label for="firstPeriodGrade">First Period Grade (0 to 20):</label>
-<input type="number" id="firstPeriodGrade" name="firstPeriodGrade" min="0" max="20" step="1"><br>
+<label for="mathfirstPeriodGrade">First Period Grade (0 to 20):</label>
+<input type="number" id="mathfirstPeriodGrade" name="mathfirstPeriodGrade" min="0" max="20" step="1"><br>
 
-<label for="secondPeriodGrade">Second Period Grade (0 to 20):</label>
-<input type="number" id="secondPeriodGrade" name="secondPeriodGrade" min="0" max="20" step="1"><br>
+<label for="mathsecondPeriodGrade">Second Period Grade (0 to 20):</label>
+<input type="number" id="mathsecondPeriodGrade" name="mathsecondPeriodGrade" min="0" max="20" step="1"><br>
             
             <button type="submit" value="Submit"> Submit </button>
             <div id="result_x"></div>
@@ -310,27 +310,27 @@
     <div id="portugueseForm" class="form-container">
         <form action="#" method="post">
             <form action="#" method="post">
-                <label for="mathSex">Sex:</label>
-                <input type="radio" id="mathSexFemale" name="mathSex" value="0"> <label for="mathSexFemale">Female</label>
-                <input type="radio" id="mathSexMale" name="mathSex" value="1"> <label for="mathSexMale">Male</label> <br>
+                <label for="pormathSex">Sex:</label>
+                <input type="radio" id="pormathSex" name="pormathSex" value="0"> <label for="pormathSex">Female</label>
+                <input type="radio" id="pormathSex" name="pormathSex" value="1"> <label for="pormathSex">Male</label> <br>
                 
-                <label for="mathAge">Age:</label>
-                <input type="text" id="mathAge" name="mathAge"><br>
+                <label for="pormathAge">Age:</label>
+                <input type="text" id="pormathAge" name="pormathAge"><br>
                 
-                <label for="mathAddress">Address:</label>
-                <input type="radio" id="mathAddressUrban" name="mathAddress" value="0"> <label for="mathAddressUrban">Urban area</label>
-                <input type="radio" id="mathAddressRural" name="mathAddress" value="1"> <label for="mathAddressRural">Rural area</label> <br>
+                <label for="pormathAddress">Address:</label>
+                <input type="radio" id="pormathAddress" name="pormathAddress" value="0"> <label for="pormathAddress">Urban area</label>
+                <input type="radio" id="pormathAddres" name="pormathAddress" value="1"> <label for="pormathAddress">Rural area</label> <br>
                 
-                <label for="mathFamSize">Family Size:</label>
-                <input type="radio" id="mathFamSizeLess" name="mathFamSize" value="0"> <label for="mathFamSizeLess">Less or equal to 3</label>
-                <input type="radio" id="mathFamSizeMore" name="mathFamSize" value="1"> <label for="mathFamSizeMore">Greater than 3</label> <br>
+                <label for="pormathFamSize">Family Size:</label>
+                <input type="radio" id="pormathFamSize" name="pormathFamSize" value="0"> <label for="pormathFamSize">Less or equal to 3</label>
+                <input type="radio" id="pormathFamSize" name="pormathFamSize" value="1"> <label for="pormathFamSize">Greater than 3</label> <br>
                 
-                <label for="mathPStatus">Parental Status:</label>
-                <input type="radio" id="mathPStatusLiving" name="mathPStatus" value="0"> <label for="mathPStatusLiving">Living Together</label>
-                <input type="radio" id="mathPStatusApart" name="mathPStatus" value="1"> <label for="mathPStatusApart">Apart</label> <br>
+                <label for="pormathPStatus">Parental Status:</label>
+                <input type="radio" id="pormathPStatus" name="pormathPStatus" value="0"> <label for="pormathPStatus">Living Together</label>
+                <input type="radio" id="pormathPStatus" name="pormathPStatus" value="1"> <label for="pormathPStatus">Apart</label> <br>
                 
-                <label for="mathMedu">Mother Education:</label>
-                <select id="mathMedu" name="mathMedu">
+                <label for="pormathMedu">Mother Education:</label>
+                <select id="pormathMedu" name="pormathMedu">
                     <option value="0">None</option>
                     <option value="1">Primary Education (4th Grade)</option>
                     <option value="2">5th to 9th Class</option>
@@ -338,8 +338,8 @@
                     <option value="4">Higher Education</option>
                 </select><br>
     
-                <label for="mathMedu">Father Education:</label>
-                <select id="mathMedu" name="mathMedu">
+                <label for="pormathMedu">Father Education:</label>
+                <select id="pormathMedu" name="pormathMedu">
                     <option value="0">None</option>
                     <option value="1">Primary Education (4th Grade)</option>
                     <option value="2">5th to 9th Class</option>
@@ -347,8 +347,8 @@
                     <option value="4">Higher Education</option>
                 </select><br>
     
-                <label for="motherJob">Mother Job:</label>
-    <select id="motherJob" name="motherJob">
+                <label for="pormotherJob">Mother Job:</label>
+    <select id="pormotherJob" name="pormotherJob">
         <option value="0">At Home</option>
         <option value="1">Health</option>
         <option value="2">Other</option>
@@ -356,8 +356,8 @@
         <option value="4">Teacher</option>
     </select><br>
     
-    <label for="fatherJob">Father Job:</label>
-    <select id="fatherJob" name="fatherJob">
+    <label for="porfatherJob">Father Job:</label>
+    <select id="porfatherJob" name="porfatherJob">
         <option value="0">At Home</option>
         <option value="1">Health</option>
         <option value="2">Other</option>
@@ -365,155 +365,155 @@
         <option value="4">Teacher</option>
     </select><br>
     
-    <label for="reasonMap">Reason for Choosing School:</label>
-    <select id="reasonMap" name="reasonMap">
+    <label for="porreasonMap">Reason for Choosing School:</label>
+    <select id="porreasonMap" name="porreasonMap">
         <option value="0">Course</option>
         <option value="1">Others</option>
         <option value="2">Close to Home</option>
         <option value="3">Reputation</option>
     </select><br>
     
-    <label for="guardianMap">Guardian:</label>
-    <select id="guardianMap" name="guardianMap">
+    <label for="porguardianMap">Guardian:</label>
+    <select id="porguardianMap" name="porguardianMap">
         <option value="0">Mother</option>
         <option value="1">Father</option>
         <option value="2">Other</option>
     </select><br>
     
-    <label for="travelTime">Home to School Travel Time:</label>
-    <select id="travelTime" name="travelTime">
+    <label for="portravelTime">Home to School Travel Time:</label>
+    <select id="portravelTime" name="portravelTime">
         <option value="1">Less than 15 min</option>
         <option value="2">15 to 30 min</option>
         <option value="3">30 min to 1 hour</option>
         <option value="4">More than 1 hour</option>
     </select><br>
     
-    <label for="studyTime">Weekly Study Time:</label>
-    <select id="studyTime" name="studyTime">
+    <label for="porstudyTime">Weekly Study Time:</label>
+    <select id="porstudyTime" name="porstudyTime">
         <option value="1">Less than 2 hours</option>
         <option value="2">2 to 5 hours</option>
         <option value="3">5 to 10 hours</option>
         <option value="4">More than 10 hours</option>
     </select><br>
     
-    <label for="pastFailures">Number of Past Class Failures:</label>
-    <input type="number" id="pastFailures" name="pastFailures" min="1" max="4" step="1"><br>
+    <label for="porpastFailures">Number of Past Class Failures:</label>
+    <input type="number" id="porpastFailures" name="porpastFailures" min="1" max="4" step="1"><br>
     
-    <label for="eduSupport">Extra Educational Support:</label>
-    <input type="radio" id="eduSupportYes" name="eduSupport" value="1"> <label for="eduSupportYes">Yes</label>
-    <input type="radio" id="eduSupportNo" name="eduSupport" value="0"> <label for="eduSupportNo">No</label><br>
+    <label for="poreduSupport">Extra Educational Support:</label>
+    <input type="radio" id="poreduSupport" name="poreduSupport" value="1"> <label for="poreduSupport">Yes</label>
+    <input type="radio" id="poreduSupport" name="poreduSupport" value="0"> <label for="poreduSupport">No</label><br>
     
-    <label for="famSupport">Family Educational Support:</label>
-    <input type="radio" id="famSupportYes" name="famSupport" value="1"> <label for="famSupportYes">Yes</label>
-    <input type="radio" id="famSupportNo" name="famSupport" value="0"> <label for="famSupportNo">No</label><br>
+    <label for="porfamSupport">Family Educational Support:</label>
+    <input type="radio" id="porfamSupport" name="porfamSupport" value="1"> <label for="porfamSupport">Yes</label>
+    <input type="radio" id="porfamSupport" name="porfamSupport" value="0"> <label for="porfamSupport">No</label><br>
     
-    <label for="paidClasses">Extra Paid Classes:</label>
-    <input type="radio" id="paidClassesYes" name="paidClasses" value="1"> <label for="paidClassesYes">Yes</label>
-    <input type="radio" id="paidClassesNo" name="paidClasses" value="0"> <label for="paidClassesNo">No</label><br>
+    <label for="porpaidClasses">Extra Paid Classes:</label>
+    <input type="radio" id="porpaidClasses" name="porpaidClasses" value="1"> <label for="porpaidClasses">Yes</label>
+    <input type="radio" id="porpaidClasses" name="porpaidClasses" value="0"> <label for="porpaidClasses">No</label><br>
     
-    <label for="extraCurricular">Extra-curricular Activities:</label>
-    <input type="radio" id="extraCurricularYes" name="extraCurricular" value="1"> <label for="extraCurricularYes">Yes</label>
-    <input type="radio" id="extraCurricularNo" name="extraCurricular" value="0"> <label for="extraCurricularNo">No</label><br>
+    <label for="porextraCurricular">Extra-curricular Activities:</label>
+    <input type="radio" id="porextraCurricular" name="porextraCurricular" value="1"> <label for="porextraCurricular">Yes</label>
+    <input type="radio" id="porextraCurricular" name="porextraCurricular" value="0"> <label for="porextraCurricular">No</label><br>
     
-    <label for="nurserySchool">Attended Nursery School:</label>
-    <input type="radio" id="nurserySchoolYes" name="nurserySchool" value="1"> <label for="nurserySchoolYes">Yes</label>
-    <input type="radio" id="nurserySchoolNo" name="nurserySchool" value="0"> <label for="nurserySchoolNo">No</label><br>
+    <label for="pornurserySchool">Attended Nursery School:</label>
+    <input type="radio" id="pornurserySchool" name="pornurserySchool" value="1"> <label for="pornurserySchool">Yes</label>
+    <input type="radio" id="pornurserySchool" name="pornurserySchool" value="0"> <label for="pornurserySchool">No</label><br>
     
-    <label for="higherEdu">Wants to Take Higher Education:</label>
-    <input type="radio" id="higherEduYes" name="higherEdu" value="1"> <label for="higherEduYes">Yes</label>
-    <input type="radio" id="higherEduNo" name="higherEdu" value="0"> <label for="higherEduNo">No</label><br>
+    <label for="porhigherEdu">Wants to Take Higher Education:</label>
+    <input type="radio" id="porhigherEdu" name="porhigherEdu" value="1"> <label for="porhigherEdu">Yes</label>
+    <input type="radio" id="porhigherEdu" name="porhigherEdu" value="0"> <label for="porhigherEdu">No</label><br>
     
-    <label for="internetAccess">Internet Access at Home:</label>
-    <input type="radio" id="internetAccessYes" name="internetAccess" value="1"> <label for="internetAccessYes">Yes</label>
-    <input type="radio" id="internetAccessNo" name="internetAccess" value="0"> <label for="internetAccessNo">No</label><br>
+    <label for="porinternetAccess">Internet Access at Home:</label>
+    <input type="radio" id="porinternetAccess" name="porinternetAccess" value="1"> <label for="porinternetAccess">Yes</label>
+    <input type="radio" id="porinternetAccess" name="porinternetAccess" value="0"> <label for="porinternetAccess">No</label><br>
     
-    <label for="romanticRelationship">With a Romantic Relationship:</label>
-    <input type="radio" id="romanticRelationshipYes" name="romanticRelationship" value="1"> <label for="romanticRelationshipYes">Yes</label>
-    <input type="radio" id="romanticRelationshipNo" name="romanticRelationship" value="0"> <label for="romanticRelationshipNo">No</label><br>
+    <label for="porromanticRelationship">With a Romantic Relationship:</label>
+    <input type="radio" id="porromanticRelationship" name="porromanticRelationship" value="1"> <label for="porromanticRelationship">Yes</label>
+    <input type="radio" id="porromanticRelationship" name="porromanticRelationship" value="0"> <label for="porromanticRelationship">No</label><br>
     
-    <label for="familyRelationship">Quality of Family Relationships:</label>
-    <input type="radio" id="familyRelationship1" name="familyRelationship" value="1">
-    <label for="familyRelationship1">Very Bad</label>
-    <input type="radio" id="familyRelationship2" name="familyRelationship" value="2">
-    <label for="familyRelationship2">Bad</label>
-    <input type="radio" id="familyRelationship3" name="familyRelationship" value="3">
-    <label for="familyRelationship3">Average</label>
-    <input type="radio" id="familyRelationship4" name="familyRelationship" value="4">
-    <label for="familyRelationship4">Good</label>
-    <input type="radio" id="familyRelationship5" name="familyRelationship" value="5">
-    <label for="familyRelationship5">Excellent</label><br>
+    <label for="porfamilyRelationship">Quality of Family Relationships:</label>
+    <input type="radio" id="familyRelationship" name="porfamilyRelationship" value="1">
+    <label for="porfamilyRelationship">Very Bad</label>
+    <input type="radio" id="familyRelationship" name="porfamilyRelationship" value="2">
+    <label for="porfamilyRelationship">Bad</label>
+    <input type="radio" id="familyRelationship" name="porfamilyRelationship" value="3">
+    <label for="porfamilyRelationship">Average</label>
+    <input type="radio" id="familyRelationship" name="porfamilyRelationship" value="4">
+    <label for="porfamilyRelationship">Good</label>
+    <input type="radio" id="familyRelationship" name="porfamilyRelationship" value="5">
+    <label for="porfamilyRelationship">Excellent</label><br>
     
-    <label for="freeTime">Free Time After School:</label>
-    <input type="radio" id="freeTime1" name="freeTime" value="1">
-    <label for="freeTime1">Very Low</label>
-    <input type="radio" id="freeTime2" name="freeTime" value="2">
-    <label for="freeTime2">Low</label>
-    <input type="radio" id="freeTime3" name="freeTime" value="3">
-    <label for="freeTime3">Average</label>
-    <input type="radio" id="freeTime4" name="freeTime" value="4">
-    <label for="freeTime4">High</label>
-    <input type="radio" id="freeTime5" name="freeTime" value="5">
-    <label for="freeTime5">Very High</label><br>
+    <label for="porfreeTime">Free Time After School:</label>
+    <input type="radio" id="porfreeTime" name="porfreeTime" value="1">
+    <label for="porfreeTime">Very Low</label>
+    <input type="radio" id="porfreeTime" name="porfreeTime" value="2">
+    <label for="porfreeTime">Low</label>
+    <input type="radio" id="porfreeTime" name="porfreeTime" value="3">
+    <label for="porfreeTime">Average</label>
+    <input type="radio" id="porfreeTime" name="porfreeTime" value="4">
+    <label for="porfreeTime">High</label>
+    <input type="radio" id="porfreeTime" name="porfreeTime" value="5">
+    <label for="porfreeTime">Very High</label><br>
     
-    <label for="goingOut">Going Out with Friends:</label>
-    <input type="radio" id="goingOut1" name="goingOut" value="1">
-    <label for="goingOut1">Very Low</label>
-    <input type="radio" id="goingOut2" name="goingOut" value="2">
-    <label for="goingOut2">Low</label>
-    <input type="radio" id="goingOut3" name="goingOut" value="3">
-    <label for="goingOut3">Average</label>
-    <input type="radio" id="goingOut4" name="goingOut" value="4">
-    <label for="goingOut4">High</label>
-    <input type="radio" id="goingOut5" name="goingOut" value="5">
-    <label for="goingOut5">Very High</label><br>
+    <label for="porgoingOut">Going Out with Friends:</label>
+    <input type="radio" id="porgoingOut" name="porgoingOut" value="1">
+    <label for="porgoingOut">Very Low</label>
+    <input type="radio" id="porgoingOut" name="porgoingOut" value="2">
+    <label for="porgoingOut">Low</label>
+    <input type="radio" id="porgoingOut" name="porgoingOut" value="3">
+    <label for="porgoingOut">Average</label>
+    <input type="radio" id="porgoingOut" name="porgoingOut" value="4">
+    <label for="porgoingOut">High</label>
+    <input type="radio" id="porgoingOut" name="porgoingOut" value="5">
+    <label for="porgoingOut">Very High</label><br>
     
-    <label for="workdayAlcohol">Workday Alcohol Consumption:</label>
-    <input type="radio" id="workdayAlcohol1" name="workdayAlcohol" value="1">
-    <label for="workdayAlcohol1">Very Low</label>
-    <input type="radio" id="workdayAlcohol2" name="workdayAlcohol" value="2">
-    <label for="workdayAlcohol2">Low</label>
-    <input type="radio" id="workdayAlcohol3" name="workdayAlcohol" value="3">
-    <label for="workdayAlcohol3">Average</label>
-    <input type="radio" id="workdayAlcohol4" name="workdayAlcohol" value="4">
-    <label for="workdayAlcohol4">High</label>
-    <input type="radio" id="workdayAlcohol5" name="workdayAlcohol" value="5">
-    <label for="workdayAlcohol5">Very High</label><br>
+    <label for="porworkdayAlcohol">Workday Alcohol Consumption:</label>
+    <input type="radio" id="porworkdayAlcohol" name="porworkdayAlcohol" value="1">
+    <label for="porworkdayAlcohol">Very Low</label>
+    <input type="radio" id="porworkdayAlcohol" name="porworkdayAlcohol" value="2">
+    <label for="porworkdayAlcohol">Low</label>
+    <input type="radio" id="porworkdayAlcohol" name="porworkdayAlcohol" value="3">
+    <label for="porworkdayAlcohol">Average</label>
+    <input type="radio" id="porworkdayAlcohol" name="porworkdayAlcohol" value="4">
+    <label for="porworkdayAlcohol">High</label>
+    <input type="radio" id="porworkdayAlcohol" name="porworkdayAlcohol" value="5">
+    <label for="porworkdayAlcohol">Very High</label><br>
     
-    <label for="weekendAlcohol">Weekend Alcohol Consumption:</label>
-    <input type="radio" id="weekendAlcohol1" name="weekendAlcohol" value="1">
-    <label for="weekendAlcohol1">Very Low</label>
-    <input type="radio" id="weekendAlcohol2" name="weekendAlcohol" value="2">
-    <label for="weekendAlcohol2">Low</label>
-    <input type="radio" id="weekendAlcohol3" name="weekendAlcohol" value="3">
-    <label for="weekendAlcohol3">Average</label>
-    <input type="radio" id="weekendAlcohol4" name="weekendAlcohol" value="4">
-    <label for="weekendAlcohol4">High</label>
-    <input type="radio" id="weekendAlcohol5" name="weekendAlcohol" value="5">
-    <label for="weekendAlcohol5">Very High</label><br>
+    <label for="porweekendAlcohol">Weekend Alcohol Consumption:</label>
+    <input type="radio" id="porweekendAlcohol" name="porweekendAlcohol" value="1">
+    <label for="porweekendAlcohol">Very Low</label>
+    <input type="radio" id="porweekendAlcohol" name="porweekendAlcohol" value="2">
+    <label for="porweekendAlcohol">Low</label>
+    <input type="radio" id="porweekendAlcohol" name="porweekendAlcohol" value="3">
+    <label for="porweekendAlcohol">Average</label>
+    <input type="radio" id="porweekendAlcohol" name="porweekendAlcohol" value="4">
+    <label for="porweekendAlcohol">High</label>
+    <input type="radio" id="porweekendAlcohol" name="porweekendAlcohol" value="5">
+    <label for="porweekendAlcohol5">Very High</label><br>
     
     
-    <label for="healthStatus">Current Health Status:</label>
-    <input type="radio" id="mathhealthStatus1" name="healthStatus" value="1">
-    <label for="healthStatus1">Very Bad</label>
-    <input type="radio" id="healthStatus2" name="healthStatus" value="2">
-    <label for="healthStatus2">Bad</label>
-    <input type="radio" id="healthStatus3" name="healthStatus" value="3">
-    <label for="healthStatus3">Average</label>
-    <input type="radio" id="healthStatus4" name="healthStatus" value="4">
-    <label for="healthStatus4">Good</label>
-    <input type="radio" id="healthStatus5" name="healthStatus" value="5">
-    <label for="healthStatus5">Very Good</label><br>
+    <label for="porhealthStatus">Current Health Status:</label>
+    <input type="radio" id="porhealthStatus" name="porhealthStatus" value="1">
+    <label for="porhealthStatus">Very Bad</label>
+    <input type="radio" id="porhealthStatus" name="porhealthStatus" value="2">
+    <label for="porhealthStatus">Bad</label>
+    <input type="radio" id="porhealthStatus" name="porhealthStatus" value="3">
+    <label for="porhealthStatus">Average</label>
+    <input type="radio" id="porhealthStatus" name="porhealthStatus" value="4">
+    <label for="porhealthStatus">Good</label>
+    <input type="radio" id="porhealthStatus" name="porhealthStatus" value="5">
+    <label for="porhealthStatus">Very Good</label><br>
     
-    <label for="schoolAbsences">Number of School Absences (0 to 93):</label>
-    <input type="number" id="mathschoolAbsences" name="schoolAbsences" min="0" max="93" step="1"><br>
+    <label for="porschoolAbsences">Number of School Absences (0 to 93):</label>
+    <input type="number" id="porschoolAbsences" name="porschoolAbsences" min="0" max="93" step="1"><br>
     
-    <label for="firstPeriodGrade">First Period Grade (0 to 20):</label>
-    <input type="number" id="mathfirstPeriodGrade" name="firstPeriodGrade" min="0" max="20" step="1"><br>
+    <label for="porfirstPeriodGrade">First Period Grade (0 to 20):</label>
+    <input type="number" id="firstPeriodGrade" name="porfirstPeriodGrade" min="0" max="20" step="1"><br>
     
     <label for="secondPeriodGrade">Second Period Grade (0 to 20):</label>
-    <input type="number" id="mathsecondPeriodGrade" name="secondPeriodGrade" min="0" max="20" step="1"><br>
+    <input type="number" id="porsecondPeriodGrade" name="porsecondPeriodGrade" min="0" max="20" step="1"><br>
         
-            <input type="submit" value="Submit">
+            <input type="porsubmit" value="porSubmit">
             <div id="result_y"></div>
         </form>
     </div>

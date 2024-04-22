@@ -10,6 +10,8 @@ def home():
 def submit():
     form_data = request.json
     print(form_data)
+    #return a json response of submitted successfully
+    return {"grade": 9.6}
 
 if __name__ == "__main__":
     app.run(host="localhost", port=5000, debug=True)
