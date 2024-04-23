@@ -10,7 +10,7 @@ def home():
 @app.route("/predict", methods=["POST"])
 def submit():
     form_data = request.json
-    keys_for_array = [
+    keys_for_array = ['mathSex','mathAge', 'mathAddress', 'mathFamSize', 'mathPStatus', 'mathMedu', 'mathFedu','motherJob', 'fatherJob', 'reasonMap', 'guardianMap', 
     'travelTime', 'studyTime', 'pastFailures', 'eduSupport', 'famSupport',
     'paidClasses', 'extraCurricular', 'nurserySchool', 'higherEdu',
     'internetAccess', 'romanticRelationship', 'familyRelationship',
@@ -28,7 +28,9 @@ def submit():
     with open('catboost.pkl', 'rb') as file:
         loaded_model = pk.load(file)
     prediction = loaded_model.predict([numeric_values])
-    return {"grade1": prediction[0], "grade2": prediction[1]}
+    print (prediction)
+    return {"grade1": prediction[0], "grade2": prediction[0]}
+    
 
 if __name__ == "__main__":
     app.run(host="localhost", port=5000, debug=True)
