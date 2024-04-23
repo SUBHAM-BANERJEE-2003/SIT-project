@@ -309,7 +309,7 @@
     
     <div id="portugueseForm" class="form-container">
         <form action="#" method="post">
-            <form action="#" method="post">
+            <form method="post" action="/predict" onsubmit="handleSubmit(event)">
                 <label for="pormathSex">Sex:</label>
                 <input type="radio" id="pormathSex" name="pormathSex" value="0"> <label for="pormathSex">Female</label>
                 <input type="radio" id="pormathSex" name="pormathSex" value="1"> <label for="pormathSex">Male</label> <br>
@@ -338,8 +338,8 @@
                     <option value="4">Higher Education</option>
                 </select><br>
     
-                <label for="pormathMedu">Father Education:</label>
-                <select id="pormathMedu" name="pormathMedu">
+                <label for="pormathFedu">Father Education:</label>
+                <select id="pormathFedu" name="pormathFedu">
                     <option value="0">None</option>
                     <option value="1">Primary Education (4th Grade)</option>
                     <option value="2">5th to 9th Class</option>
@@ -508,12 +508,12 @@
     <input type="number" id="porschoolAbsences" name="porschoolAbsences" min="0" max="93" step="1"><br>
     
     <label for="porfirstPeriodGrade">First Period Grade (0 to 20):</label>
-    <input type="number" id="firstPeriodGrade" name="porfirstPeriodGrade" min="0" max="20" step="1"><br>
+    <input type="number" id="porfirstPeriodGrade" name="porfirstPeriodGrade" min="0" max="20" step="1"><br>
     
     <label for="secondPeriodGrade">Second Period Grade (0 to 20):</label>
     <input type="number" id="porsecondPeriodGrade" name="porsecondPeriodGrade" min="0" max="20" step="1"><br>
         
-            <input type="porsubmit" value="porSubmit">
+            <input type="submit" value="porSubmit">
             <div id="result_y"></div>
         </form>
     </div>
@@ -537,6 +537,7 @@
     const handleSubmit = (e) => {
         e.preventDefault();
         const formdata = {
+            // math data
             mathSex: document.querySelector('input[name="mathSex"]:checked').value,
             mathAge: document.getElementById('mathAge').value,
             mathAddress: document.querySelector('input[name="mathAddress"]:checked').value,
@@ -567,7 +568,39 @@
             healthStatus: document.querySelector('input[name="mathhealthStatus"]:checked').value,
             schoolAbsences: document.getElementById('mathschoolAbsences').value,
             firstPeriodGrade: document.getElementById('mathfirstPeriodGrade').value,
-            secondPeriodGrade: document.getElementById('mathsecondPeriodGrade').value
+            secondPeriodGrade: document.getElementById('mathsecondPeriodGrade').value,
+            // portuguese data
+            pormathSex: document.querySelector('input[name="pormathSex"]:checked').value,
+            pormathAge: document.getElementById('pormathAge').value,
+            pormathAddress: document.querySelector('input[name="pormathAddress"]:checked').value,
+            pormathFamSize: document.querySelector('input[name="pormathFamSize"]:checked').value,
+            pormathPStatus: document.querySelector('input[name="pormathPStatus"]:checked').value,
+            pormathMedu: document.getElementById('pormathMedu').value,
+            pormathFedu: document.getElementById('pormathFedu').value,
+            pormotherJob: document.getElementById('pormotherJob').value,
+            porfatherJob: document.getElementById('porfatherJob').value,
+            porreasonMap: document.getElementById('porreasonMap').value,
+            porguardianMap: document.getElementById('porguardianMap').value,
+            portravelTime: document.getElementById('portravelTime').value,
+            porstudyTime: document.getElementById('porstudyTime').value,
+            porpastFailures: document.getElementById('porpastFailures').value,
+            poreduSupport: document.querySelector('input[name="poreduSupport"]:checked').value,
+            porfamSupport: document.querySelector('input[name="porfamSupport"]:checked').value,
+            porpaidClasses: document.querySelector('input[name="porpaidClasses"]:checked').value,
+            porextraCurricular: document.querySelector('input[name="porextraCurricular"]:checked').value,
+            pornurserySchool: document.querySelector('input[name="pornurserySchool"]:checked').value,
+            porhigherEdu: document.querySelector('input[name="porhigherEdu"]:checked').value,
+            porinternetAccess: document.querySelector('input[name="porinternetAccess"]:checked').value,
+            porromanticRelationship: document.querySelector('input[name="porromanticRelationship"]:checked').value,
+            porfamilyRelationship: document.querySelector('input[name="porfamilyRelationship"]:checked').value,
+            porfreeTime: document.querySelector('input[name="porfreeTime"]:checked').value,
+            porgoingOut: document.querySelector('input[name="porgoingOut"]:checked').value,
+            porworkdayAlcohol: document.querySelector('input[name="porworkdayAlcohol"]:checked').value,
+            porweekendAlcohol: document.querySelector('input[name="porweekendAlcohol"]:checked').value,
+            porhealthStatus: document.querySelector('input[name="porhealthStatus"]:checked').value,
+            porschoolAbsences: document.getElementById('porschoolAbsences').value,
+            porfirstPeriodGrade: document.getElementById('porfirstPeriodGrade').value,
+            porsecondPeriodGrade: document.getElementById('porsecondPeriodGrade').value
         };
         fetch("/predict", {
             method: "POST",
@@ -577,7 +610,8 @@
             body: JSON.stringify(formdata)
         }).then(response => response.json())
             .then(data => {
-                document.getElementById('result_x').innerHTML = `Predicted Grade: ${data.grade}`;
+                document.getElementById('result_x').innerHTML = `Predicted Grade for Math: ${data.grade1}`;
+                document.getElementById('result_y').innerHTML = `Predicted Grade for Portuguese: ${data.grade2}`;
             }).catch(error => {
                 console.error('Error:', error);
             });
