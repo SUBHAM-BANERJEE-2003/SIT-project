@@ -154,12 +154,14 @@ def submit():
     'porweekendAlcohol', 'porhealthStatus', 'porschoolAbsences', 'porfirstPeriodGrade',
     'porsecondPeriodGrade'
     ]
+    print("key for arr: ",len(keys_for_array))
     numeric_values = [int(form_data[key]) for key in keys_for_array]
-    print(numeric_values)
+    print("numeric val: ", len(numeric_values))
+    print(form_data)
     with open('catboost.pkl', 'rb') as file:
         loaded_model = pk.load(file)
     prediction = loaded_model.predict([numeric_values])
-    print(prediction)
+    print (prediction)
     return {"grade1": prediction[0], "grade2": prediction[0]}
 
 @app.route("/contact")
